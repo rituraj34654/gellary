@@ -21,6 +21,7 @@ header{
   align-items: center;
   
 }
+
 header ul{
   height: 50px;
   width: 100%;
@@ -42,10 +43,16 @@ header li{
   color: white;
  margin-left: 15px;
 }
+a{
+  color: white;
+  font-size: 20px;
+  text-shadow: 0px 0px 10px white;
+}
 main{
   height: auto;
   width: 100%;
   display: flex;
+
   justify-content: center;
   align-content: center;
   
@@ -67,7 +74,7 @@ main{
   height: 100px;
  width:100px;
   margin: 10px;
-  object-fit: cover;
+  object-fit:cover;
   cursor: pointer;
   transition: transform 0.4s;
 }
@@ -76,8 +83,52 @@ main{
   box-shadow:  0 4px 8px rgba(0,0,0,0.2);
 }
 
+.lightBox{
+ height: 80vh;
+ width: 75vw;
+ background-color: rgb(253, 251, 251);
+ display:none;
+ justify-content: space-between;
+ position: fixed;
+ top: 55px;
+ align-self: center;
+
+}
+
+.lightBox.show{
+ 
+  display: flex;
+}
+
+.lightBox .button{
+  height: 25px;
+  width: 40px;
+  align-self: center;
+  margin: 3px;
+
+}
+.bigImg{
+  height: 90%;
+  width: 80%;
+  align-self: center;
+  border-radius: 4px;
+}
+#buttoncut{
+  position: fixed;
+  top: 20px;
+  right: 10px;
+}
 .button{
-  hide
+  color: white;
+  height: 5%;
+  width: 10%;
+  background-color: black;
+  border: none;
+  cursor: pointer;
+}
+.button:hover{
+ color: rgb(44, 32, 32);
+ font-weight: 700;
 }
 
 @media(width<=640px){
@@ -100,4 +151,21 @@ main{
     width: 60px;
     margin: 2px;
   }
+
+  .lightBox{
+      height: 95vh;
+      width: 100%;
+      background-color: rgb(0, 0, 0);
+      display:none;
+      justify-content: space-between;
+      position: fixed;
+      top: 55px;
+      align-self: center;
+  }
+
+  .bigImg{
+  height: 90%;
+  width: 80%;
+  align-self: center;
+}
 }
