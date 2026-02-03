@@ -1,0 +1,103 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body{
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  color: red;
+}
+
+header{
+  height: 10vh; 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+header ul{
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+header li{
+  margin: 3px;
+  border-radius: 10px;
+  height: 40px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(53, 43, 43);
+  cursor: pointer;
+  color: white;
+ margin-left: 15px;
+}
+main{
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  
+}
+.imageArea{
+  height: auto;
+  width: 90%;
+ 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 5px;
+  gap: 2px;
+  
+}
+
+.imageArea img{
+  height: 100px;
+ width:100px;
+  margin: 10px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.4s;
+}
+.imageArea img:hover{
+  transform: scale(1.1);
+  box-shadow:  0 4px 8px rgba(0,0,0,0.2);
+}
+
+.button{
+  hide
+}
+
+@media(width<=640px){
+
+  .imageArea{
+  height: auto;
+  width: 100%;
+ 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 5px;
+  gap: 1px;
+  
+}
+
+  .imageArea img{
+    height: 80px;
+    width: 60px;
+    margin: 2px;
+  }
+}
