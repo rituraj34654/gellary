@@ -1,16 +1,11 @@
+const navHidden = document.querySelector('#navHidden')
 
-const image =document.querySelector('#image');
-const nature = document.querySelector('#nature');
-const animals = document.querySelector('#animals');
-const wikales = document.querySelector('.wikales');
-const lightBox = document.querySelector('.lightBox');
-const buttoncut = document.querySelector('#buttoncut');
-const buttonPrev = document.querySelector('#buttonPrev');
-const buttonNext = document.querySelector('#buttonNext');
-const imageAreya = document.querySelectorAll('.img');
- const bigImg = document.querySelector('.bigImg');
+navHidden.addEventListener('click',()=>{
+  document.querySelector('.hideNav').classList.toggle('active')
+})
 
-const naturalImg = [
+
+const NaturalImg = [
   'public/nature/1.jpg',
   'public/nature/2.jpg',
   'public/nature/3.jpg',
@@ -34,6 +29,7 @@ const naturalImg = [
   'public/nature/21.jpg',
   'public/nature/22.jpg',
   'public/nature/23.jpg',
+  'public/nature/24.jpg',
   'public/nature/25.jpg',
   'public/nature/26.jpg',
   'public/nature/27.jpg',
@@ -42,10 +38,9 @@ const naturalImg = [
   'public/nature/30.jpg',
   'public/nature/31.jpg',
   'public/nature/32.jpg',
-  'public/nature/33.jpg',
 ]
 
-const vehiclesImg = [
+const vhiclesImg = [
   'public/wikale/1.jpg',
   'public/wikale/2.jpg',
   'public/wikale/3.jpg',
@@ -90,21 +85,52 @@ const vehiclesImg = [
   'public/wikale/42.jpg',
   'public/wikale/43.jpg',
 ]
+const allImg = [NaturalImg, vhiclesImg,];
+const flatImg = allImg.flat()
 
-const animalsImg = []
+const imageContainer = document.querySelector('.imageContainer');
+const lightBox = document.querySelector('.lightBox');
+const cut = document.querySelector('#cut');
+const prev = document.querySelector('#prev');
+const next = document.querySelector('#next');
+const BigIamge = document.querySelector('.BigIamge');
 
+flatImg.forEach((src, index)=>{
+  const image = document.createElement('img');
+  image.src = src
+  image.className ="img" 
+  image.dataset.index = index
+  image.loading = 'lazy'
 
-
-imageAreya.forEach((img, index)=>{
-  for(let i=0; i<=naturalImg.length; i++){
-    img.src = naturalImg[index]
-  }
-  
-  img.src = naturalImg[index]
-  img.addEventListener('click', ()=>{
-     lightBox.style.display = 'flex';
-     img.forEach((img, index)=>{
-     
-     })
-  })
+  imageContainer.appendChild(image)
 })
+
+const gellery = document.querySelectorAll('.img');
+let LocalIndex = 0
+gellery.forEach((img, index)=>{
+  img.addEventListener('click', ()=>{
+    lightBox.style.display = 'flex'
+    BigIamge.src = img.src;
+    LocalIndex = index;
+  })
+  
+})
+
+next.addEventListener('click', ()=>{
+  LocalIndex++;
+  if(LocalIndex>=flatImg.length) LocalIndex = 0;
+  BigIamge.src = flatImg[LocalIndex];
+})
+
+prev.addEventListener('click', ()=>{
+  LocalIndex--;
+  if(LocalIndex<0) LocalIndex = flatImg.length - 1;
+  BigIamge.src = flatImg[LocalIndex];
+});
+
+cut.addEventListener('click', ()=>{
+  lightBox.style.display = 'none';
+})
+
+
+
