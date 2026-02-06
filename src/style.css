@@ -76,7 +76,7 @@ main h1{
   height: auto;
 }
 .imageContainer{
-  height: 100%;
+  height: auto;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -88,7 +88,7 @@ main h1{
   height: 100px;
   width: 100px;
   margin: 2px;
-  transition: scale 0.7s ease-in;
+  transition: transform 0.2s ease-in;
 }
 .img:hover{
   transform: scale(1.1);
@@ -100,38 +100,93 @@ main h1{
   position: fixed;
   top: 10vh;
   width: 100%;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  align-items: center;
+  background-color:rgb(68, 62, 62);
 }
 .bigimgContainer{
-  height: 100%;
-  width: 90%;
-  background-color: black;
-  z-index: 50;
+  height: 98%;
+  width: 100%;
 }
 .BigIamge{
   height: 100%;
   width: 100%;
-  object-fit: contain;
-  object-position: center;
-  border: none;
+ object-fit: contain;
 }
 
 .lightBox button{
-  height: 30px;
-  width: 30px;
-  border: none;
-  margin: 2px;
+ height: auto;
+ width: auto;
+ border: none;
+ background-color: rgb(68, 62, 62);
+ margin: 2px;
 }
 
 .lightBox button span{
-  background-color: black;
+ font-size: 35px; 
+ opacity: 30;
+ color: #000000;
+ transition: transform 0.1ms ease-in;
+}
+
+.lightBox button span:active{
+  transform: scale(0.0);
+}
+
+
+#cut{
+position: fixed;
+top: 10vh;
+right: 10px;
+}
+#prev{
+  position: fixed;
+  bottom: 1vh;
+  left: 2vw;
+}
+#next{
+  position:fixed;
+  bottom: 1vh;
+  right: 2vw;
+}
+
+@media (min-width: 768px){
+
+  
+header{
+  height: 15vh;
+}
+ .img{
+  height: 300px;
+  width: 300px;
+  margin: 3px;
+  transition: transform 0.7s ease-in;
+}
+.img:hover{
+  transform: scale(1.1);
+}
+.lightBox{
+  top:15vh;
+}
+.lightBox button span{
+  font-size: 60px;
+}
+
+.lightBox button{
+  height: 60px;
+  width: 60px;
   border: none;
-  color: white;
-  font-size: 30px;
+  margin: 2px;
+  box-shadow: none;
 }
 #cut{
-  position: fixed;
-  top: 10vh;
-  right: 5px;
+  top: 16vh;
+}
+#prev{
+  bottom: unset;
+}
+#next{
+  bottom: unset;
+}
 }
