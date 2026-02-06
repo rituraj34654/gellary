@@ -1,25 +1,31 @@
-# Image Gallery Project
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/94f95111-7e89-4756-9505-2916ac0f8664" />
 
-A simple and interactive image gallery built with HTML, CSS, and JavaScript.  
-This project is created for learning and practice purposes.
 
-## Features
-- Display a collection of images in a gallery layout
-- Click on an image to view it in larger size (lightbox effect)
-- click on a category which is leave in header section
-- we have to two types data for category
-- if click on category than see two opitons first natural second vehicles
-- if click on natural you can see pictures of natural things
-- if click on vehicles you can see pictures of vehicles
-- Responsive design for desktop and mobile devices
-- Smooth hover effects and transitions
+A simple, modern, and responsive Image Gallery built using **HTML5, CSS3, and Vanilla JavaScript**. This project features a clean grid layout and an interactive Lightbox for a better viewing experience.
 
-## Technologies Used
-- HTML
-- CSS
-- JavaScript
-- vite
-- 
-## How to Run
-1. Clone or download the repository
-2. Open `index.html` in any modern web browser
+## ✨ Features
+
+- **Responsive Grid:** Automatically adjusts to fit Mobile, Tablet, and Desktop screens.
+- **Lightbox View:** Click on any image to open it in a high-quality full-screen modal.
+- **Navigation Controls:** Switch between images effortlessly using `Next` and `Previous` buttons inside the Lightbox.
+- **Smooth Interaction:** Includes hover effects and transitions for a professional feel.
+- **Simple Architecture:** Lightweight code without the need for external libraries or frameworks.
+
+## 🚀 Live Demo
+
+*You can add your GitHub Pages link here once you host it!*
+
+## 🛠️ Tech Stack
+
+HTML5
+CSS3:** Powering the layout with Flexbox and custom styling.
+- **JavaScript (ES6):** Handling the modal logic, image switching, and DOM manipulation.
+
+## 📂 Project Structure
+
+gellary/
+├── src/
+│   ├── style.css    
+│   └── main.js      
+├── index.html      
+└── README.md        
