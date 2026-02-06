@@ -23,6 +23,3 @@ This project is created for learning and practice purposes.
 ## How to Run
 1. Clone or download the repository
 2. Open `index.html` in any modern web browser
-
-## Project Structure
-
