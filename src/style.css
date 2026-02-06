@@ -127,6 +127,7 @@ main{
  opacity: 30;
  color: #000000;
  transition: transform 0.1ms ease-in;
+ cursor: pointer;
 }
 
 .lightBox button span:active{
